@@ -1,6 +1,6 @@
 name: dx
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
+description: A toolbox for dart/Flutter. It could speed up your development work.
+version: 1.0.1
 homepage: https://github.com/androidyue/dx
 
 environment:
