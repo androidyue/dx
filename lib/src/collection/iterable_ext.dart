@@ -1,5 +1,5 @@
 
-import 'package:dartbox/src/util/safely.dart';
+import 'package:dx/src/util/safely.dart';
 
 extension IterableExt<E> on Iterable<E> {
   E? firstOrNull() {
