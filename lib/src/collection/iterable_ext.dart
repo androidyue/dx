@@ -21,4 +21,12 @@ extension IterableExt<E> on Iterable<E> {
       return lastWhere(test);
     });
   }
+  
+  E? secondOrNull() {
+    return skip(1).firstOrNull();
+  }
+
+  E? thirdOrNull() {
+    return skip(2).firstOrNull();
+  }
 }

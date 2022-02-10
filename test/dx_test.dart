@@ -51,5 +51,20 @@ void main() {
     });
 
 
+    test('secondOrNull', () {
+      expect(<int>[].secondOrNull(), null);
+      expect([1].secondOrNull(), null);
+      expect([1,2].secondOrNull(), 2);
+      expect([1,2,3].secondOrNull(), 2);
+    });
+
+    test('thirdOrNull', () {
+      expect(<int>[].thirdOrNull(), null);
+      expect([1].thirdOrNull(), null);
+      expect([1,2].thirdOrNull(), null);
+      expect([1,2,3].thirdOrNull(), 3);
+      expect([1,2,3,4].thirdOrNull(), 3);
+    });
+
   });
 }
