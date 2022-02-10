@@ -3,7 +3,7 @@ import 'package:dx/src/collection/iterable_ext.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('A group of tests for interable_ext.dart', () {
     test('firstOrNull', () {
       /// first of an empty list is null
       expect(<int>[].firstOrNull(), null);
@@ -66,5 +66,15 @@ void main() {
       expect([1,2,3,4].thirdOrNull(), 3);
     });
 
+  });
+
+
+  group('A group of tests for string_ext.dart', () {
+    test('isNotNullAndNotEmpty', () {
+      String? nullString = null;
+      expect(nullString.isNotNullAndNotEmpty(), false);
+      expect(''.isNotNullAndNotEmpty(), false);
+      expect('111'.isNotNullAndNotEmpty(), true);
+    });
   });
 }
