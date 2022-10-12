@@ -76,5 +76,19 @@ void main() {
       expect(''.isNotNullAndNotEmpty(), false);
       expect('111'.isNotNullAndNotEmpty(), true);
     });
+
+    test('isNotNullNorEmpty', () {
+      String? nullString = null;
+      expect(nullString.isNotNullNorEmpty(), false);
+      expect(''.isNotNullNorEmpty(), false);
+      expect('111'.isNotNullNorEmpty(), true);
+    });
+
+    test('isNullOrEmpty', () {
+      expect(''.isNullOrEmpty, true);
+      expect(null.isNullOrEmpty, true);
+      expect('actual'.isNullOrEmpty, false);
+    });
+
   });
 }
