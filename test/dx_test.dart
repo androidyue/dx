@@ -110,4 +110,10 @@ void main() {
     expect(nullableInt.orOne(), 1);
     expect(nullableInt.or(2), 2);
   });
+
+  test('nullable map fallback', () {
+    Map<String, String>? nullableMap;
+    expect(nullableMap.orEmptyMap(), <String, String>{});
+  });
+
 }
