@@ -1,5 +1,4 @@
 import 'package:dx/dx.dart';
-import 'package:dx/src/collection/iterable_ext.dart';
 import 'package:test/test.dart';
 
 void main() {
