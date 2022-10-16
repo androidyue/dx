@@ -96,4 +96,18 @@ void main() {
     expect(nullableBool.orTrue(), true);
     expect(nullableBool.orFalse(), false);
   });
+
+  test('nullable double fallback', () {
+    double? nullableDouble;
+    expect(nullableDouble.orZero(), 0.0);
+    expect(nullableDouble.orOne(), 1.0);
+    expect(nullableDouble.or(3.14), 3.14);
+  });
+
+  test('nullable int fallback', () {
+    int? nullableInt;
+    expect(nullableInt.orZero(), 0);
+    expect(nullableInt.orOne(), 1);
+    expect(nullableInt.or(2), 2);
+  });
 }
