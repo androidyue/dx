@@ -91,4 +91,10 @@ void main() {
     });
 
   });
+
+  test('BoolExt', () {
+    bool? nullableBool;
+    expect(nullableBool.orTrue(), true);
+    expect(nullableBool.orFalse(), false);
+  });
 }

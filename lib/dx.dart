@@ -6,3 +6,4 @@ library dx;
 export 'src/collection/iterable_ext.dart';
 export 'src/core/string_ext.dart';
 export 'src/util/safely.dart';
+export 'src/core/bool_ext.dart';
