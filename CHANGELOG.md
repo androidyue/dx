@@ -1,3 +1,9 @@
+# 1.2.0 (2022-10-18)
+
+## Features
+
+- add dynamic extensions ([d180ff5](commit/d180ff5))
+
 # 1.1.0 (2022-10-12)
 
 ## Features
