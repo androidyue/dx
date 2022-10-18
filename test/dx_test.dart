@@ -6,10 +6,12 @@ void main() {
     test('firstOrNull', () {
       /// first of an empty list is null
       expect(<int>[].firstOrNull(), null);
+
       /// first of [1] is 1
       expect([1].firstOrNull(), 1);
+
       /// first of [1,2] is 1
-      expect([1,2].firstOrNull(), 1);
+      expect([1, 2].firstOrNull(), 1);
     });
 
     test('firstOrNullWhere', () {
@@ -23,16 +25,18 @@ void main() {
       expect([1].firstOrNullWhere((element) => element == 2), null);
 
       /// first of [1,2] with filter(element == 2) is 2
-      expect([1,2].firstOrNullWhere((element) => element == 2), 2);
+      expect([1, 2].firstOrNullWhere((element) => element == 2), 2);
     });
 
     test('lastOrNull', () {
       /// last of an empty list is null
       expect(<int>[].lastOrNull(), null);
+
       /// last of [1] is 1
       expect([1].lastOrNull(), 1);
+
       /// last of [1,2] is 1
-      expect([1,2].lastOrNull(), 2);
+      expect([1, 2].lastOrNull(), 2);
     });
 
     test('lastOrNullWhere', () {
@@ -46,27 +50,24 @@ void main() {
       expect([1].lastOrNullWhere((element) => element == 2), null);
 
       /// last of [1,2] with filter(element == 2) is 2
-      expect([1,2].lastOrNullWhere((element) => element == 2), 2);
+      expect([1, 2].lastOrNullWhere((element) => element == 2), 2);
     });
-
 
     test('secondOrNull', () {
       expect(<int>[].secondOrNull(), null);
       expect([1].secondOrNull(), null);
-      expect([1,2].secondOrNull(), 2);
-      expect([1,2,3].secondOrNull(), 2);
+      expect([1, 2].secondOrNull(), 2);
+      expect([1, 2, 3].secondOrNull(), 2);
     });
 
     test('thirdOrNull', () {
       expect(<int>[].thirdOrNull(), null);
       expect([1].thirdOrNull(), null);
-      expect([1,2].thirdOrNull(), null);
-      expect([1,2,3].thirdOrNull(), 3);
-      expect([1,2,3,4].thirdOrNull(), 3);
+      expect([1, 2].thirdOrNull(), null);
+      expect([1, 2, 3].thirdOrNull(), 3);
+      expect([1, 2, 3, 4].thirdOrNull(), 3);
     });
-
   });
-
 
   group('A group of tests for string_ext.dart', () {
     test('isNotNullAndNotEmpty', () {
@@ -88,7 +89,6 @@ void main() {
       expect(null.isNullOrEmpty, true);
       expect('actual'.isNullOrEmpty, false);
     });
-
   });
 
   test('BoolExt', () {
@@ -116,4 +116,35 @@ void main() {
     expect(nullableMap.orEmptyMap(), <String, String>{});
   });
 
+  group('asXXX tests', () {
+    final dynamic dValueString = '';
+    final dynamic dValueInt = 1;
+    final dynamic dValueDouble = 1.0;
+    final dynamic dValueBool = true;
+
+    test('test.asBool', () {
+      expect(asBool(dValueBool), dValueBool);
+      expect(asBool(dValueString), null);
+    });
+
+    test('test.asString', () {
+      expect(asString(dValueString), dValueString);
+      expect(asString(dValueInt), null);
+    });
+
+    test('test.asDouble', () {
+      expect(asDouble(dValueDouble), dValueDouble);
+      expect(asDouble(dValueString), null);
+    });
+
+    test('test.asInt', () {
+      expect(asInt(dValueInt), dValueInt);
+      expect(asInt(dValueString), null);
+    });
+
+
+
+
+
+  });
 }
